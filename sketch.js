@@ -28,6 +28,7 @@ function setup(){
    cat.addImage("catStill",cat2);
    cat.addAnimation("catRunning",cat3);
    cat.addImage("catEnd",cat4);
+   cat.setCollider("rectangle",0,0,75,100);
    cat.scale=0.2;
 
 
@@ -35,6 +36,8 @@ function setup(){
    mouse.addImage("mouseStill",mouse2);
    mouse.addAnimation("mouseRunning",mouse3);
    mouse.addImage("mouseEnd",mouse4);
+   mouse.setCollider("rectangle",0,0,75,100);
+
    mouse.scale=0.2;
 
 }
@@ -62,7 +65,7 @@ function keyPressed(){
   }
 }
 function collisionSprites(){
-      if(cat.x+mouse.x<=cat.width/2+mouse.width/2&&){
+      if(cat.x+mouse.x<=(cat.width+mouse.width)/2){
         cat.changeAnimation("catEnd",cat4);
         cat.velocityX=0;
         mouse.changeAnimation("mouseEnd",mouse4);
