@@ -56,7 +56,7 @@ function draw() {
 function keyPressed(){
 
   //For moving and changing animation write code here
-  if(keyDown("left")){
+  if(keyCode===left){
       cat.changeAnimation("catRunning",cat3);
       cat.velocityX=-4;
       mouse.changeAnimation("mouseRunning",mouse3);
